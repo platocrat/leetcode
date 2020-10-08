@@ -1,16 +1,21 @@
 /**
  * @dev
- * LeetCode Reference:
+ * 424. Longest Repeating Character Replacement
+ * 
+ * Difficulty:         Medium 
+ * 
+ * Reference:
  * https://leetcode.com/problems/longest-repeating-character-replacement/
  *
- * Time complexity:
+ * 
+ * Intuition:          Text
+ * 
+ * 
+ * Time complexity:    O()
  *
- * Space complexity:
+ * Space complexity:   O()
  *
- * Difficulty:        Medium
- */
-// ---------------------------------------------------------------------------
-/**
+ *
  * @dev  
  * ATTEMPT #1 
  * 
