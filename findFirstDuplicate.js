@@ -2,9 +2,16 @@
  * @param {Number[]} _numbers
  * @return {Number}
  * 
+ * 
  * @dev 
- * Difficulty: Medium
- * ----------------------------------------------------------------------------
+ * 287. Find the Duplicate Number
+ * 
+ * Difficulty:         Medium
+ * 
+ * Reference:
+ * https://leetcode.com/problems/find-the-duplicate-number/solution/
+ * 
+ * 
  * Approach 1: Sorting
  * 
  * Intuition:          This problem is provably solvable using the pigeonhole 
@@ -13,10 +20,11 @@
  *                     one item.
  * 
  * Time Complexity:    O(nlogn)
+ 
  *                     The `sort` invocation costs O(nlogn) time, so it 
  *                     dominates the linear scan of the for loop.
  * 
- * Space Complexity:   O(1) (if an in-place algorithm is used), or O(n) (if not)
+ * Space Complexity:   O(1) if an in-place algorithm is used, or O(n) if not
  * 
  *                     We sort `numbers` in place, so the memory footprint is 
  *                     constant. If we cannot modify the input array, then we 
@@ -42,6 +50,7 @@ function findDuplicate(_numbers) {
  * @param {Number[]} _number
  * @return {Number}
  *
+ * 
  * @dev
  * Approach 2: Set
  *
@@ -50,6 +59,7 @@ function findDuplicate(_numbers) {
  *                     array.
  * 
  * Time Complexity:    O(n)
+ * 
  *                     We run through and process each element in the 
  *                     array once since we are using a hash table to store re-
  *                     occurrences. However, note that insertions and lookups
@@ -57,9 +67,10 @@ function findDuplicate(_numbers) {
  *                     complexities. The algorithm is therefore linear, as it
  *                     consists of a `for` loop that processes each element in
  *                     the array once. So, performance would decrease as n, the
- *                     size of the array decreases.
+ *                     size of the array decreases. 
  * 
  * Space Complexity:   O(n)
+ * 
  *                     In the worst case, the duplicate element appears twice,
  *                     with the duplicate appearing at array index n - 1. In
  *                     this case, `seen` will contain n - 1 distinct values,

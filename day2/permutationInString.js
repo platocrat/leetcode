@@ -3,18 +3,22 @@
  * @param {string} s2
  * @return {boolean}
  * 
+ * 
  * @dev
- * LeetCode Reference:
+ * 3. Longest Substring Without Repeating Characters
+ * 
+ * Difficulty:         Medium
+ * 
+ * Reference:
  * https://leetcode.com/problems/longest-substring-without-repeating-characters/
+ * 
+ * 
+ * Time complexity:    O()
  *
- * Time complexity:   
- *
- * Space complexity:  
- *
- * Difficulty:        Medium
- */
-// ---------------------------------------------------------------------------
-/**
+ * 
+ * Space complexity:   O()
+ * 
+ * 
  * @dev
  * ATTEMPT #1
  *
