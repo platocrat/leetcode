@@ -86,7 +86,7 @@ function twoSum(nums, target) {
   let map = {}
 
   for (let i in nums) {
-    complement = target - nums[ i ] // get complement to check for in next step
+    let complement = target - nums[ i ] // get complement to check for in next step
 
     if (complement in map) {
       return [ map[ complement ], i ]
