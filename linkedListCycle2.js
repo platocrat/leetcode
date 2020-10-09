@@ -10,9 +10,9 @@
  * 
  * Intuition:          Since each node needs to hold *its own value*, 
  *                     represented by the `this.val` method, and *a pointer to 
- *                     the next node*, represented by the `this.next` method, 
- *                     we can specify each property as as a method of our 
- *                     `ListNode` function.
+ *                     the next node in the list*, represented by the 
+ *                     `this.next` method, we can specify each property as as a
+ *                     method of our `ListNode` function.
  * 
 
  * Defintion for a singly-linked list.
@@ -68,7 +68,7 @@ function detectCycle(head) {
       return node
     } else {
       visited.add(node)
-      // using pointer to next node to traverse through the linked list, i.e.,
+      // using pointer to the next next node to traverse through the linked list, i.e.,
       // through `LinkNode`
       node = node.next
     }
