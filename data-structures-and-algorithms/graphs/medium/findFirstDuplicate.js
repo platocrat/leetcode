@@ -1,8 +1,4 @@
 /**
- * @param {Number[]} _numbers
- * @return {Number}
- * 
- * 
  * @dev 
  * 287. Find the Duplicate Number
  * 
@@ -30,6 +26,9 @@
  *                     constant. If we cannot modify the input array, then we 
  *                     must allocate linear space for a copy of `numbers` and
  *                     sort that instead.
+ * 
+ * @param {Number[]} _number
+ * @return {Number}
  */
 function findDuplicate(_numbers) {
   /**
@@ -47,10 +46,6 @@ function findDuplicate(_numbers) {
 }
 
 /**
- * @param {Number[]} _number
- * @return {Number}
- *
- * 
  * @dev
  * Approach 2: Set
  *
@@ -75,6 +70,10 @@ function findDuplicate(_numbers) {
  *                     with the duplicate appearing at array index n - 1. In
  *                     this case, `seen` will contain n - 1 distinct values,
  *                     and will therefore occupy O(n) space.
+ * 
+ * 
+ * @param {Number[]} _number
+ * @return {Number}
  */
 function findDuplicate(_numbers) {
   // Sets are not constant time! They take up space similar to arrays.
@@ -90,9 +89,6 @@ function findDuplicate(_numbers) {
 }
 
 /**
- * @param {Number[]} _numbers
- * @return {Number}
- *
  * @dev
  * Approach 3: Floyd's Tortoise and Hare (Cycle Detection)
  *
@@ -102,5 +98,22 @@ function findDuplicate(_numbers) {
  *                      "Given a linked list, return the node where the cycle
  *                      begins."
  *
- *                      First, where does the cycle come from?
+ *                      First, where does the cycle come from? 
+ *                      Let's use the function `f(x) = nums[x]` to construct the
+ *                      sequence: `x, nums[x], nums[nums[x]], 
+ *                      nums[nums[nums[x]]], ...`
+ * 
+ *                      Each new element in the sequence is an element in nums 
+ *                      at the index of 
+ * 
+ * Time complexiy:      O(n)
+ * 
+ * Space complexity:    O(1)
+ * 
+ * 
+ * @param {Number[]} _numbers
+ * @return {Number}
  */
+function findDuplicate(_numbers) {
+
+}
