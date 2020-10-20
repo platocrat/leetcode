@@ -167,7 +167,7 @@ The *length* of a path is the number of edges. The *shortest path* between two n
 ```
 
 Sometimes, edges have associated *weights*:
-![Weighted Connected Graph](/data-structures-and-algorithms/egraphs/img/weights.png)
+![Weighted Connected Graph](/data-structures-and-algorithms/graphs/img/weights.png)
 
 Weights are numerical values that indicate some measure about the edge. A *weighted graph* is a graph where the edges have weights. Otherwise, the graph is *unweighted*. Often, weights denote edge lengths or the distance between nodes, but it depends on the context. *Weights are taken into account when defining the length of paths or the distance between nodes*: in a weighted graph, the length of a path is not the number of edges, it is the sum of the weights of the edges on it.
 
