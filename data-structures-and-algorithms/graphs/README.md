@@ -154,4 +154,27 @@ If every node can reach every other node, a graph is *connected*. Otherwise, the
 
 *A connected graph has at least `n-1` edges*. This is because a graph with 0 edges, but one node, has `n` connected components, or 1 connected component composed of 1 node. With 1 edge we can connect two connected components (e.g. 2 graphs composed of 1 node each) and reduce the number of connected components by 1 (i.e. 2 graphs of one node each become 1 connected component graph of 2 nodes and 1 edge).
 
-The *length* of a path is the number of edges. The *shortest path* between two nodes (can be easily found using breadth-first search (BFS) at the cost of _slightly_ more memory relative to depth-first search (DFS)) is the path starting at one end and ending at the other end with the fewest edges. 
+The *length* of a path is the number of edges. The *shortest path* between two nodes is the path with the fewest edges starting at one node (e.g. node `u`) and ending at another (e.g. node `v`). The *shortest path* between two nodes can be _easily found using breadth-first search (BFS)_ at the cost of _slightly_ more memory relative to a depth-first search (DFS) approach. The shortest path may not be unique. The *distance* between two nodes is the length of the shortest path between them. If two graphs are in different connected components, the distance between them is said to be _infinite_. The *diameter* of a connected graph is the _maximum distance_ between any two nodes.
+```   
+        ()--\                       length(P) = 4 
+      /   \  \---()                 distance(u, v) = distance(v, u) = 4
+    (u)    \      |  (v)            diameter(G) = 5
+      \    ()     | / |  \
+    P  \  / |    () P |   ()
+       ()   |   /  \  |  /
+         \  | / P    ()
+       p  ()        
+```
+
+Sometimes, edges have associated *weights*:
+![Weighted Connected Graph](/img/weights.png)
+
+Weights are numerical values that indicate some measure about the edge. A *weighted graph* is a graph where the edges have weights. Otherwise, the graph is *unweighted*. Often, weights denote edge lengths or the distance between nodes, but it depends on the context. *Weights are taken into account when defining the length of paths or the distance between nodes*: in a weighted graph, the length of a path is not the number of edges, it is the sum of the weights of the edges on it.
+
+It is less common, but sometimes nodes have weights too, instead of edges.
+
+A graph that is constructed by taking a subset of the nodes and/or edges or another graph is called a *subgraph*.
+
+A *tree* is a connected graph without cycles. A *forest* is a graph without cycles, where each connected component is a tree. *A connected graph is a tree if and only if it has `n-1` edges*. As we said earlier, _in order to be connected, a graph needs at least `n-1` nodes_. A tree cannot have more than `n-1` edges because if you add an edge `{u, v}` to a graph and `u` and `v` are already in the same connected component, that creates a cycle. 
+
+When we analyze the runtime or space of grpah algorithms (algorithms where the input is a graph), we do it in terms of both `n` and `m`. The fact that trees have `m = n - 1` edges is important in the analysis of algorihms. It means that the time or space of an algorithm for trees depends only on `n`.
