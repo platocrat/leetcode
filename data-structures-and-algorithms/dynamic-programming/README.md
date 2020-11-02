@@ -1,1 +1,1 @@
-# Dynamic Programming: Problems and Techniques
+# Dynamic Programming

@@ -4,5 +4,4 @@
  * @return {number[]}
  */
 function maxSumOfThreeSubarrays(nums, k) {
-
 }
