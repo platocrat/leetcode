@@ -13,7 +13,7 @@ Output: 5->4->3->2->1->NULL
 **Follow up:**
 A linked list can be reversed either iteratively or recursively. Could you implement both?
 
-## LeetCode Solution 1: Iterative
+## Solution 1: LeetCode's Iterative
 Assume that we have linked list `1 → 2 → 3 → Ø`, and we could like to change it to `Ø ← 1 ← 2 ← 3`.
 
 Process:
@@ -47,8 +47,26 @@ function reverseList(head) {
     curr = nextTmp
   }
 
-  return prev
+  // program will terminate with the linked list starting at node `5`, using the
+  // given example
+  return prev 
 }
 ```
 
-## LeetCode Solution 2: Recursive
+## Solution 2: Optimized Iterative
+```js
+function reverseList(head) {
+  // initialize previous pointer as the new head of the linked list
+  let newHead = null
+
+  // head is always equal to the current node when calling `this.val` 
+  while (head != null) {
+    let tmp = head
+    head = head.next
+    tmp.next = prev
+    prev = tmp
+  }
+
+  return prev
+}
+```

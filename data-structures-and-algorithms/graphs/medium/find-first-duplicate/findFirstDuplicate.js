@@ -34,9 +34,24 @@ function findDuplicate2(numbers) {
 }
 
 /**
+ * @dev Tortoise and Hare (Cycle Detection) Algorith
  * @param {Number[]} numbers
  * @return {Number}
  */
 function findDuplicate3(numbers) {
+  let tortoise = hare = nums[0]
+  while (true) {
+    tortoise = nums[tortoise]
+    hare = nums[nums[hare]]
+    if (tortoise == hare) break 
+  }
 
+  tortoise = nums[0]
+
+  while (tortoise != hare) {
+    tortoise = nums[tortoise]
+    hare = nums[hare]
+  }
+  
+  return hare
 }
