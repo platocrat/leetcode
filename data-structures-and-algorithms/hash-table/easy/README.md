@@ -27,3 +27,7 @@ Output: ["banana"]
 * `0 <= A.length <= 200`
 * `0 <= B.length <= 200`
 * `A` and `B` both contain only spaces and lowercase letters.
+
+## Intuition
+Hash tables are often used to avoid linear searches.
+

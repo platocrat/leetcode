@@ -13,3 +13,14 @@ If your line go through the edge of a brick, then the brick is not considered as
 **Note:**
 1. The width sum of bricks in different rows are the same and won't exceed INT_MAX.
 1. The number of bricks in each row is in range [1,10,000]. The height of wall is in range [1,10,000]. Total number of bricks of the wall won't exceed 20,000.
+
+## Intuition
+Find min number of crossed bricks
+
+find max number of skipped bricks ('gaps' between bricks)
+
+Idea: build map from each vertical line to count of gaps it goes "through"
+
+Return wall height - maximum count
+
+How do we build this map line2count?
