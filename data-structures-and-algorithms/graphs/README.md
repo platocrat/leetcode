@@ -1245,4 +1245,12 @@ Some guidelines:
 - ALWAYS analyze the time and space complexity of your solutions using big-O notation BEFORE you start coding it!
 - These problems can not be found anywhere online, since they are all made-up.
 
-1. Given the adjacency list of a directed graph, 
+1. Given the adjacency list of a directed graph, return the number of edges in the graph. 
+
+_Sol._
+```py
+def num_edges(G):
+    return sum(len(nbrs) for nbrs in G))
+```
+
+If I want to get the number of edges from an adjacency list, I need to sum the length of each list in the adjacency list; that is, sum the 
