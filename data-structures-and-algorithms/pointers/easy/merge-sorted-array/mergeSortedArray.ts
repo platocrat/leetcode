@@ -1,5 +1,9 @@
 /**
  * Do not return anything, modify nums1 in-place instead.
+ * @dev The arrays are already sorted, so the largest remaining element must be at the end of one of the arrays. Put that largest element at the end of nums1, then move backward.
+ * 
+ * Time complexity: O(m + n) - We traverse both arrays once, where m is the length of nums1 and n is the length of nums2.
+ * Space complexity: O(1) - We are using a constant amount of extra space for the pointers.
  */
 function merge(
   nums1: number[],
