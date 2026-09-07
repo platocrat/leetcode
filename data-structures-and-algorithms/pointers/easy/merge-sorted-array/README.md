@@ -1,4 +1,6 @@
-# 1. Merge Sorted Array
+# 88. Merge Sorted Array
+
+[Reference](https://leetcode.com/problems/merge-sorted-array/)
 
 Difficulty: Easy
 
