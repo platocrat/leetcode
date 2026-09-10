@@ -1,17 +1,21 @@
 # Binary search (algorithm)
+>
 > The binary search algorithm is so well known and important in the industry, YOU CANNOT MESS THIS ALGORITHM UP
 
 ## Interview Cake (explanation)
+
 **A binary search algorithm finds an item in a _sorted array_ in _O(log(n))_ time.**
 
 A brute force search would walk through the whole array, taking _O(n)_ (linear) time in the worst case.
 
 Let's say we have a sorted array of numbers. To find a number with a binary search, we:
+
 1. **Start with the middle number: is it bigger or smaller than our target?** Since the array is sorted, this tells us if the target would be in the _left_ half or _right_ half of our array. If the middle number is _less than_ our target, we know that the target is in the _right_ half, and if it's _greater than_, we know the target is in the _left_ half.
 2. **We've effectively divided the problem in half.** We can "rule out" the whole half of the array that we know doesn't contain the target number.
 3. **Repeat the same approach (of starting in the middle) on the new half-size problem.** Then do it again, and again, until we either find the number or "rule out" the whole set.
 
 We can do this recursively, or iteratively. Here's an iterative version:
+
 ```js
 /**
  * @dev See if target appears in nums
@@ -51,9 +55,10 @@ function binarySearch(target, nums) {
 }
 ```
 
-
 ## First Bad Commit (explanation)
+
 ### When to use Binary Search
+
 * **Variables contained in the data structure are consistently linear, i.e. _in a sorted ascending order_**
 * Time complexity is faster than O(n)
   * Hashing, constant O(1) time
@@ -61,6 +66,7 @@ function binarySearch(target, nums) {
   * Determine upper bound quickly to rule out algorithms
 
 #### Algorithm
+
 ```python
 class Solution:
   def firstBadVersion(self, n):
@@ -76,13 +82,16 @@ class Solution:
         r = mid - 1
     return 1
 ```
+
 * Note that on the 5th iteration, left pointer gets placed on the right, and right
 pointer goes to the left.
 
 ### Classical Binary Search
+
 Find any position of a target number in a sorted array. Return -1 if target does not exist.
 
-##### Binary Search - Attempt 1
+#### Binary Search - Attempt 1
+
 ```python
 def binary_search(nums, target):
   l, r = 0, len (nums) - 1
@@ -98,7 +107,8 @@ def binary_search(nums, target):
   return -1
 ```
 
-##### Attempt 2
+#### Attempt 2
+
 ```python
 def binary_search(nums, target):
   l, r = 0, len (nums) - 1
@@ -114,6 +124,7 @@ def binary_search(nums, target):
 ```
 
 #### Classical Binary Search Algorithm
+
 ```js
 function binarySearch(nums, target) {
   let floorIndex = 0, // left wall
@@ -136,15 +147,18 @@ function binarySearch(nums, target) {
 ```
 
 ### Find Closest Element to Target in Sorted Array
-Find an alement that is closest to a given target number
 
-##### Example 2:
+Find an element that is closest to a given target number
+
+#### Example 2
+
 Input: arr = [1, 1, 3, 6, 7], target = 4
 Output: 2 # index for 3
 
 What to do when target isn't in array?
 
-##### Solution?
+#### Solution?
+
 Add at the very end, after the algorithm is done, then perform post-processing, a check to see what the data structure contains
 
 ```python
@@ -171,7 +185,8 @@ def find_nearest(nums, target):
 However, we still don't account that left and right at the very end, so...
 left will be out of bounds.
 
-##### Updated version
+#### Updated version
+
 ```python
 def find_nearest(nums, target):
   l, 
@@ -191,11 +206,12 @@ def find_nearest(nums, target):
       return r
 ```
 
-##### NOTE
+#### NOTE
+
 Left and right WILL overlap with 1 element
 
-
 ### Find First Position of Element in Sorted Array
+
 ```python
 def get_first(nums, target):
     floor_index = - 1
@@ -217,6 +233,7 @@ def get_first(nums, target):
 ```
 
 ### Find Last Position of Element in Sorted Array
+
 ```python
 def get_first(nums, target):
 
@@ -234,12 +251,13 @@ def get_first(nums, target):
     if nums[l] == target: return l
     return -1
 ```
+
 A lot of people forget to think through how post-processing is affected with different problems. Make sure to run through a quick example during the interview to convince your interviewer!
 
-
-
 ### InterviewCake's Iterative Version of Binary Search
+
 JavaScript implementation:
+
 ```javascript
 function binarySearch(target, nums) {
   // See if target appears in nums
@@ -277,8 +295,8 @@ function binarySearch(target, nums) {
 }
 ```
 
-
 Python implementation:
+
 ```python
 def binary_search(target, nums):
     """See if target appears in nums"""
