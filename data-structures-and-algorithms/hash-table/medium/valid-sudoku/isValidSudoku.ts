@@ -2,6 +2,6 @@
  * @param {character[][]} board
  * @return {boolean}
  */
-const isValidSudoku = (board) => {
+const isValidSudoku = (board: string[][]) => {
 
 }
